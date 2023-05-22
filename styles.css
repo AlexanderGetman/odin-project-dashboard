@@ -14,13 +14,17 @@ body {
 }
 
 .right {
-    background-color: rgb(131, 131, 139);
+    min-width: 768px;
+    background-color: rgb(215, 215, 240);
     display: grid;
     grid-template-rows: 1fr 4fr;
 }
 
 .top {
-    background-color: rgb(66, 66, 12);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 8px 0px 5px #050404;
+    display: grid;
+    grid-template-rows: 2fr 2fr;
 }
 
 .information {
@@ -31,7 +35,6 @@ body {
 
 .portfolio {
     padding: 50px 20px 35px;
-    background-color: bisque;
     display: grid;
     grid-template-columns: 2fr 2fr;
     grid-template-columns: 2fr 2fr;
@@ -51,9 +54,29 @@ body {
     background-color: rgb(44, 27, 7);
 }
 
+.search-bar {    
+    padding-top: 20px;
+    padding-left: 25px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.top-lower-part {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+}
+
+.search-bar > form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .search-button {
     background: none;
     border: none;
+    fill: rgb(42, 66, 66);
 }
 
 .search-button:hover {
@@ -61,7 +84,11 @@ body {
 }
 
 #searchbar {
-    border-radius: 5px;
+    border: none;
+    background-color: rgb(238, 228, 228);
+    border-radius: 10px;
+    width: 90%;
+    height: 20px;
 }
 
 .portfolio > h3 {
@@ -122,3 +149,45 @@ body {
 .logo > svg path {
     fill: white;
 }
+
+.logo-small {
+    height: 30px;
+    border-radius: 25px;
+}
+
+.logo-big {
+    height: 50px;
+    border-radius: 25px;
+}
+
+.bell-button {
+    background: none;
+    border: none;    
+}
+
+.bell-button:hover {
+    cursor: pointer;
+}
+
+.login-section {
+    display: flex;
+    align-items: center;
+}
+
+.greetings-section {
+    display: block;
+ }
+
+ .greetings-section img {
+    float: left;
+ }
+
+ .greetings-section p {
+    display: block;
+    margin: 0;
+    padding-left: 10px;
+ }
+ 
+ .greetings-section p:first-child {
+    margin-top: 0;
+ }
