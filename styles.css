@@ -1,8 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    min-width: 100vw;
-    min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -16,15 +14,15 @@ body {
 .right {
     min-width: 768px;
     background-color: rgb(215, 215, 240);
-    display: grid;
-    grid-template-rows: 1fr 4fr;
 }
 
 .top {
     background-color: rgb(255, 255, 255);
-    box-shadow: 8px 0px 5px #050404;
+    box-shadow: 8px 0px 5px #887777;
     display: grid;
     grid-template-rows: 2fr 2fr;
+    min-height: 20vh;
+    max-height: 30vh;
 }
 
 .information {
@@ -43,27 +41,23 @@ body {
 }
 
 .project {
-    background-color: brown;
-}
-
-.announcements {
-    background-color: rgb(158, 127, 89);
-}
-
-.trending {
-    background-color: rgb(44, 27, 7);
+    position: relative;
+    background-color: white;
+    box-shadow: inset 1em 0 yellowgreen, 3px 2px 5px rgba(114, 110, 110, 0.329);
+    border-radius: 10px;
+    padding-left: 25px;
 }
 
 .search-bar {    
     padding-top: 20px;
     padding-left: 25px;
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 4fr 2fr;
 }
 
 .top-lower-part {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 4fr 2fr;
     align-items: center;
 }
 
@@ -129,6 +123,11 @@ body {
     fill: white;
 }
 
+.link > a:hover {
+    font-size: 16px;
+    background-color: rgb(161, 161, 235, .5);
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -162,7 +161,9 @@ body {
 
 .bell-button {
     background: none;
-    border: none;    
+    border: none;
+    padding-left: 80px;
+    padding-right: 25px;
 }
 
 .bell-button:hover {
@@ -174,12 +175,18 @@ body {
     align-items: center;
 }
 
+.login-section > span {
+    padding-left: 15px;
+}
+
 .greetings-section {
     display: block;
+    padding-left: 25px;
  }
 
  .greetings-section img {
     float: left;
+    margin-right: 20px;
  }
 
  .greetings-section p {
@@ -191,3 +198,95 @@ body {
  .greetings-section p:first-child {
     margin-top: 0;
  }
+
+ .buttons > button {
+    background-color: rgb(110, 55, 165);
+    border: none;
+    height: 40px;
+    width: 100px;
+    border-radius: 50px;
+    color: white;
+ }
+
+ .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+ }
+
+.buttons > button:hover {
+    cursor: pointer;
+    background-color: rgb(161, 107, 219);
+    width: 110px;
+}
+
+.icons > button {
+    background: none;
+    border: none;
+    float: right;
+}
+
+.icons > button > svg {
+    height: 25px;
+}
+
+.icons {
+    padding-top: 30px;
+}
+
+.icons > button:hover {
+    cursor: pointer;
+}
+
+.announcements, .trending > div {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 2px 5px rgba(114, 110, 110, 0.329);
+    width: 90%;
+    padding-left: 20px;
+}
+
+.announcements > div:first-of-type {
+    padding-top: 15px;
+}
+
+.announcements > div:last-of-type {
+    padding-bottom: 20px;
+}
+
+.announcements > div:not(:last-child)::after {
+    content: '';
+    display: inherit;
+    border-bottom: 1px solid #9e7f7f9d;
+    width: 90%;
+}
+
+.trending > div {
+    padding-top: 15px;
+}
+
+.trend {
+    display: block;
+    padding-bottom: 25px;
+}
+
+.trend img {
+    float: left;
+    margin-right: 15px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+.trend span {
+    display: block;
+    margin: 0;
+    font-size: 14px;
+}
+
+.username {
+    font-weight: 900;
+}
+
+.user-description {
+    color: rgb(61, 61, 61);
+}
