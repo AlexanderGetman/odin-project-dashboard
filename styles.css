@@ -6,6 +6,10 @@ body {
     grid-template-columns: 1fr 5fr;
 }
 
+.hambaga {
+    display: none;
+}
+
 .left {
     background-color: rgb(141, 141, 207);
     padding: 35px;
@@ -29,12 +33,14 @@ body {
     position: relative;
     display: grid;
     grid-template-columns: 3fr 1fr;
+    padding-top: 50px;
+    padding-bottom: 25px;
 }
 
 .portfolio {
-    padding: 50px 20px 35px;
+    padding-right: 20px;
+    padding-left: 35px;
     display: grid;
-    grid-template-columns: 2fr 2fr;
     grid-template-columns: 2fr 2fr;
     column-gap: 15px;
     row-gap: 20px;
@@ -87,7 +93,8 @@ body {
 
 .portfolio > h3 {
     position: absolute;
-    left: 20px
+    left: 20px;
+    top: 0px;
 }
 
 .links {    
@@ -125,7 +132,7 @@ body {
 
 .link > a:hover {
     font-size: 16px;
-    background-color: rgb(161, 161, 235, .5);
+    color: rgba(21, 21, 192, 0.5);
 }
 
 .logo {
@@ -238,6 +245,10 @@ body {
     cursor: pointer;
 }
 
+.announcements {
+    position: relative;
+}
+
 .announcements, .trending > div {
     background-color: white;
     border-radius: 10px;
@@ -259,6 +270,15 @@ body {
     display: inherit;
     border-bottom: 1px solid #9e7f7f9d;
     width: 90%;
+}
+
+.main-right {
+    position: relative;
+}
+
+.main-right > h3 {
+    position: absolute;
+    top: -50px;
 }
 
 .trending > div {
@@ -289,4 +309,120 @@ body {
 
 .user-description {
     color: rgb(61, 61, 61);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    .left {
+        padding: 5px;
+    }
+      
+    .links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgb(141, 141, 207);
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        min-width: 160px;
+        z-index: 1;
+    }
+      
+    .link {
+        display: block;
+        padding: 10px;
+    }
+      
+    .left:hover .links {
+        display: block;
+    }
+
+    .right {
+        min-width: 0px;
+    }
+
+    .hambaga {
+        display: block;
+    }
+
+    .hambaga > svg {
+        height: 35px;
+    }
+
+    .hambaga > svg path {
+        fill: white;
+    }
+
+    .top {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .search-bar {
+        display: block;
+        padding-left: 0px;
+        padding-top: 0px;
+    }
+
+    .greetings-section {
+        display: none;
+    }
+
+    #searchbar {
+        width: 80%;
+    }
+
+    .login-section {
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    .bell-button {
+        padding-left: 0px;
+    }
+
+    .top-lower-part {
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .information {
+        display: block;
+        padding-top: 0px;
+    }
+
+    .portfolio {
+        grid-template-columns: 2fr;
+        padding-left: 0px;
+        padding-right: 0px;
+        row-gap: 15px;
+    }
+
+    .main-right > h3, .portfolio > h3 {
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 10px 0px;
+        margin: 0px;
+    }
+
+    .announcements, .trending > div {
+        width: 100%;
+    }
 }
