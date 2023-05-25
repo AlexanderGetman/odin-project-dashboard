@@ -409,9 +409,14 @@ body {
 
     .portfolio {
         grid-template-columns: 2fr;
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: 1rem;
+        padding-right: 1rem;
         row-gap: 15px;
+    }
+
+    .main-right {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .main-right > h3, .portfolio > h3 {
@@ -423,6 +428,7 @@ body {
     }
 
     .announcements, .trending > div {
-        width: 100%;
+        width: initial;
     }
+
 }
